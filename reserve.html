@@ -19,7 +19,7 @@
             <p class="lead">Current Resevations and Waiting List</p>
             <hr class="my-4">
             <a class="btn btn-primary btn-lg" href="/view" role="button">Tables</a>
-            <a class="btn btn-success btn-lg" href="/resere" role="button">Make a Reservation</a>
+            <a class="btn btn-success btn-lg" href="/reserve" role="button">Make a Reservation</a>
             <a class="btn btn-light btn-lg" href="/" role="button"><i class="fas fa-home"></i></a>
         </div>
 
@@ -36,24 +36,24 @@
                         <form role="form">
 
                             <div class="form-group">
-                                <label for="reserve-name">Name</label>
+                                <label for="name">Name</label>
                                 <input type="text" class="form-control" id="reserve-name">
                             </div>
 
                             <div class="form-group">
-                                <label for="reserve-phone">Phone Number</label>
+                                <label for="phone">Phone Number</label>
                                 <input type="text" class="form-control" id="reserve-phone">
                             </div>
 
                             <div class="form-group">
-                                <label for="reserve-email">Email</label>
+                                <label for="email">Email</label>
                                 <input type="text" class="form-control" id="reserve-email">
                             </div>
 
-                            <!-- <div class="form-group">
-                                <label for="reserve-unique-id">Unique ID</label>
-                                <input type="text" class="form-control" id="reserve-unique-id">
-                            </div> -->
+                            <div class="form-group">
+                                <label for="reserve-size">Size</label>
+                                <input type="text" class="form-control" id="reserve-size">
+                            </div>
 
                             <button type="submit" class="btn btn-primary submit">Submit</button>
                         </form>
@@ -95,9 +95,10 @@
 
             // Here we grab the form elements
             var newReservation = {
-                customerName: $("#reserve-name").val().trim(),
-                phoneNumber: $("#reserve-phone").val().trim(),
-                customerEmail: $("#reserve-email").val().trim(),
+                name: $("#reserve-name").val().trim(),
+                phone: $("#reserve-phone").val().trim(),
+                email: $("#reserve-email").val().trim(),
+                size: $('#reserve-size').val().trim()
                 // customerID: $("#reserve-unique-id").val().trim()
             };
 
