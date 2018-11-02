@@ -46,8 +46,6 @@ app.post("/api/reserve", (req, res) => {
         waitList.push(newTable);
         return res.json(false);
     }
-
-    res.json(newTable);
 });
 
 
