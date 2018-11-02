@@ -9,16 +9,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
+// Views
+let pageViews = 0;
 // SET UP TABLE ARRAY
 let tableCount = 0;
-let tables = [{
-    uniqueID: 1,
-    name: "Freeman",
-    email: "email@email.com",
-    phone: "555-555-5555",
-    size: 3
-}];
+let tables = [{}];
 
 let waitList = [];
 
@@ -47,7 +42,7 @@ app.post("/api/reserve", (req, res) => {
         return res.json(false);
     }
 
-    res.json(newTable);
+   //  res.json(newTable);
 });
 
 
