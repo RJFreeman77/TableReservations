@@ -14,8 +14,8 @@
     <title>Hot Restaurant</title>
 </head>
 
-<body>
-    <div class="container" style="min-height: 100vh">
+<body class="container">
+    <div style="min-height: calc(100vh - 65px);">
         <div class="jumbotron" style="text-align: center">
             <h1 class="display-4"><i class="fas fa-fire"></i>Hot Restaurant</h1>
             <p class="lead">Book your table now! We only have 5 tables in our restaurant.</p>
@@ -24,17 +24,17 @@
             <a class="btn btn-success btn-lg" href="/reserve" role="button">Make a Reservation</a>
             <a class="btn btn-light btn-lg" href="/" role="button"><i class="fas fa-home"></i></a>
         </div>
-        <div style="position: absolute; bottom: 0">
-            <a href="/api/tables"><span class="footer-link">Tables API</span></a>
-            <a href="/api/waitlist"><span class="footer-link">Waitlist API</span></a>
-        </div>
     </div>
+    <footer class="mt-4">
+        <hr>
+        <a href="/api/tables"><span class="footer-link">Tables API</span></a>
+        <a href="/api/waitlist"><span class="footer-link">Waitlist API</span></a>
+    </footer>
     <style>
         .footer-link {
             padding: 15px;
             border-right: 1px solid grey;
         }
-
         .footer-link:last-child {
             border-right: none;
         }
